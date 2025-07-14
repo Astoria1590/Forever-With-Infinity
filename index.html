@@ -16,13 +16,19 @@
       --text-dark: #ffffff;
     }
 
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
+    }
+
+    body {
       font-family: 'Montserrat', sans-serif;
       color: var(--text-dark);
       overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .video-background {
@@ -138,6 +144,7 @@
     }
 
     main {
+      flex: 1;
       padding-top: 100px;
       text-align: center;
       backdrop-filter: brightness(1.05);
@@ -169,6 +176,15 @@
 
     p {
       font-size: 1.2rem;
+    }
+
+    footer {
+      background-color: rgba(247, 217, 217, 0.9);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.95rem;
+      color: #4a4a4a;
+      font-family: 'Montserrat', sans-serif;
     }
   </style>
 </head>
@@ -212,7 +228,11 @@
     <h1>Welcome to Our Wedding Website</h1>
     <p>We’re so excited to celebrate with you!</p>
   </main>
-  
+
+  <footer>
+    &copy; 2025 All rights reserved to Eric & Infinity Martinez
+  </footer>
+
   <script>
     const menuToggle = document.getElementById('menuToggle');
     const navOverlay = document.getElementById('navOverlay');
@@ -222,8 +242,5 @@
       navOverlay.classList.toggle('active');
     });
   </script>
-  <footer style="background-color: rgba(247, 217, 217, 0.9); text-align: center; padding: 1rem; font-size: 0.95rem; color: #4a4a4a; font-family: 'Montserrat', sans-serif; margin-top: 3rem;">
-  &copy; 2025 All rights reserved to Eric & Infinity Martinez
-</footer>
 </body>
 </html>
