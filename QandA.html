@@ -36,7 +36,6 @@
       left: 0;
       z-index: 1000;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       box-sizing: border-box;
@@ -45,23 +44,60 @@
     .logo {
       font-family: 'Great Vibes', cursive;
       font-size: 2rem;
-      flex-shrink: 0;
     }
 
     nav {
       display: flex;
-      flex-wrap: wrap;
       gap: 1rem;
+      flex-wrap: wrap;
       justify-content: flex-end;
-      flex-grow: 1;
-      overflow: visible;
+      flex: 1;
     }
 
     nav a {
       text-decoration: none;
       color: #4a4a4a;
       font-weight: 500;
-      white-space: nowrap;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: #4a4a4a;
+      transition: all 0.3s ease;
+    }
+
+    .nav-overlay {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(255, 250, 246, 0.98);
+      z-index: 999;
+    }
+
+    .nav-overlay.active {
+      display: flex;
+    }
+
+    .nav-overlay a {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      font-weight: bold;
+      color: #4a4a4a;
+      text-decoration: none;
     }
 
     .qa-section {
@@ -114,6 +150,10 @@
       nav {
         display: none;
       }
+
+      .menu-toggle {
+        display: flex;
+      }
     }
   </style>
 </head>
@@ -145,15 +185,11 @@
     <a href="#">Things to Do</a>
     <a href="#">Registry</a>
   </div>
-  </header>
 
   <section class="qa-section">
     <div class="qa-item">
       <div class="question">Who are Eric and Infinity’s parents?</div>
-      <div class="answer">Eric's parents are Eduardo Martinez and Daiana Martinez.
-        <br><br>
-        Infinity's parents are Clifton Reid & Keya Laney.
-      </div>
+      <div class="answer">Eric's parents are Eduardo Martinez and Daiana Martinez.<br><br>Infinity's parents are Clifton Reiv & Keya Laney.</div>
     </div>
     <div class="qa-item">
       <div class="question">How did Eric and Infinity meet?</div>
@@ -180,9 +216,19 @@
       <div class="answer">Online through Cash App or Apple Pay, or by cash or check.</div>
     </div>
   </section>
-  <footer style="background-color: rgba(247, 217, 217, 0.9); text-align: center; padding: 1rem; font-size: 0.95rem; color: #4a4a4a; font-family: 'Montserrat', sans-serif; margin-top: 3rem;">
-  &copy; 2025 All rights reserved to Eric & Infinity Martinez
-</footer>
 
+  <footer style="background-color: rgba(247, 217, 217, 0.9); text-align: center; padding: 1rem; font-size: 0.95rem; color: #4a4a4a; font-family: 'Montserrat', sans-serif; margin-top: 3rem;">
+    &copy; 2025 All rights reserved to Eric & Infinity Martinez
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navOverlay = document.getElementById('navOverlay');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('open');
+      navOverlay.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
