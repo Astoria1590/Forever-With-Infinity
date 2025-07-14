@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photos | Eric & Infinity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --nude-pink: #f7d9d9;
+      --off-white: #fffaf6;
+      --text-dark: #4a4a4a;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('https://res.cloudinary.com/dbeifkzba/image/upload/v1752516528/b_tlshpr.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--text-dark);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    header {
+      background-color: rgba(247, 217, 217, 0.9);
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #4a4a4a;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a4a4a;
+      font-weight: 500;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: #4a4a4a;
+      transition: all 0.3s ease;
+    }
+
+    .nav-overlay {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(255, 250, 246, 0.98);
+      z-index: 999;
+    }
+
+    .nav-overlay.active {
+      display: flex;
+    }
+
+    .nav-overlay a {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      font-weight: bold;
+      color: #4a4a4a;
+      text-decoration: none;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 130px 2rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: rgba(255, 250, 246, 0.85);
+      border-radius: 16px;
+    }
+
+    .photo-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .photo-container.circle {
+      border-radius: 50%;
+    }
+
+    .photo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      pointer-events: none;
+    }
+
+    .photo-container:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px 8px rgba(247, 217, 217, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <div class="logo">Eric & Infinity</div>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/Our Story.html">Our Story</a>
+      <a href="/Photos.html">Photos</a>
+      <a href="#">Wedding Party</a>
+      <a href="/QandA.html">Q & A</a>
+      <a href="#">Things to Do</a>
+      <a href="#">Registry</a>
+    </nav>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <div class="gallery">
+    <div class="photo-container circle"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_1052.jpeg" alt="photo"></div>
+    <div class="photo-container"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_1015.jpeg" alt="photo"></div>
+    <div class="photo-container"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_1004.jpeg" alt="photo"></div>
+    <div class="photo-container circle"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_0976.jpeg" alt="photo"></div>
+    <div class="photo-container"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_0980.jpeg" alt="photo"></div>
+    <div class="photo-container"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_0975.jpeg" alt="photo"></div>
+    <div class="photo-container circle"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_0650.jpeg" alt="photo"></div>
+    <div class="photo-container"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_8778.jpeg" alt="photo"></div>
+    <div class="photo-container"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_3375.jpeg" alt="photo"></div>
+    <div class="photo-container circle"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/d36c3f9b-8c7d-4bc6-9e07-0c9336d86fe9-1.jpeg" alt="photo"></div>
+    <div class="photo-container"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_1082.jpeg" alt="photo"></div>
+    <div class="photo-container circle"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_1075.jpeg" alt="photo"></div>
+    <div class="photo-container"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_1068.jpeg" alt="photo"></div>
+    <div class="photo-container"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_0972.jpeg" alt="photo"></div>
+    <div class="photo-container circle"><img src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_0803.jpeg" alt="photo"></div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navOverlay = document.getElementById('navOverlay');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('open');
+      navOverlay.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

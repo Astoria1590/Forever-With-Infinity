@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story | Eric & Infinity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --nude-pink: #f7d9d9;
+      --off-white: #fffaf6;
+      --text-dark: #4a4a4a;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('https://res.cloudinary.com/dbeifkzba/image/upload/v1752516061/premium_photo-1674235766088-80d8410f9523_tp9jf8.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: rgba(247, 217, 217, 0.9);
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #4a4a4a;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a4a4a;
+      font-weight: 500;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: #4a4a4a;
+      transition: all 0.3s ease;
+    }
+
+    .nav-overlay {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(255, 250, 246, 0.98);
+      z-index: 999;
+    }
+
+    .nav-overlay.active {
+      display: flex;
+    }
+
+    .nav-overlay a {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      font-weight: bold;
+      color: #4a4a4a;
+      text-decoration: none;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    main {
+      padding: 120px 1.5rem 3rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: rgba(255, 250, 246, 0.9);
+      border-radius: 16px;
+    }
+
+    .circle-image {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background-image: url('https://astoria0951.wordpress.com/wp-content/uploads/2025/07/img_0619.jpeg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 0 6px var(--nude-pink);
+      animation: glow 3s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 0 0 6px var(--nude-pink);
+      }
+      50% {
+        box-shadow: 0 0 15px 10px rgba(247, 217, 217, 0.6);
+      }
+    }
+
+    .story-text {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: var(--text-dark);
+    }
+
+    .verse {
+      font-style: italic;
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      color: #6e4b4b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Eric & Infinity</div>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/Our Story.html">Our Story</a>
+      <a href="/Photos.html">Photos</a>
+      <a href="#">Wedding Party</a>
+      <a href="/QandA.html">Q & A</a>
+      <a href="#">Things to Do</a>
+      <a href="#">Registry</a>
+    </nav>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="navOverlay">
+    <a href="/index.html">Home</a>
+    <a href="/Our Story.html">Our Story</a>
+    <a href="/Photos.html">Photos</a>
+    <a href="#">Wedding Party</a>
+    <a href="/QandA.html">Q & A</a>
+    <a href="#">Things to Do</a>
+    <a href="#">Registry</a>
+  </div>
+
+  <main>
+    <div class="circle-image"></div>
+    <div class="story-text">
+      We’ve been through a lot together—laughs, tears, prayers, and quiet moments that only we truly understand. Along the way, we’ve built more than just a life—we’ve built a bond rooted in love, trust, and unshakable faith in God.<br><br>
+      It hasn’t always been easy, but we’ve always chosen each other. Through every high and low, we leaned on Him, trusted His timing, and let Him write our story. And somehow, even in the hardest seasons, we found joy walking this road side by side.<br><br>
+      Now, with full hearts and deep gratitude, we’re saying “yes” to forever.<br><br>
+      We believe this love was God-ordained from the start, and we’re beyond excited to begin this next chapter—with all of you by our side.
+      <div class="verse">
+        “Love bears all things, believes all things, hopes all things, endures all things. Love never fails.”<br>— 1 Corinthians 13:7–8
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navOverlay = document.getElementById('navOverlay');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('open');
+      navOverlay.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

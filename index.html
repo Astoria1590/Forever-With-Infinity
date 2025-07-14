@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric & Infinity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --nude-pink: #f7d9d9;
+      --off-white: #fffaf6;
+      --text-dark: #ffffff;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.9);
+    }
+
+    header {
+      background-color: rgba(247, 217, 217, 0.9);
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #4a4a4a;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a4a4a;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      margin-left: 1rem;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: #4a4a4a;
+      transition: all 0.3s ease;
+    }
+
+    .nav-overlay {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(255, 250, 246, 0.98);
+      z-index: 999;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-overlay.active {
+      display: flex;
+    }
+
+    .nav-overlay a {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      font-weight: bold;
+      color: #4a4a4a;
+      text-decoration: none;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    main {
+      padding-top: 100px;
+      text-align: center;
+      backdrop-filter: brightness(1.05);
+    }
+
+    .hero-image {
+      width: 90%;
+      max-width: 700px;
+      height: auto;
+      margin: 1rem auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .date-location {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #ffffff;
+      margin-top: 1rem;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      margin: 2rem 0 1rem;
+      color: var(--text-dark);
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline class="video-background">
+    <source src="https://res.cloudinary.com/dbeifkzba/video/upload/v1752517227/8997516-hd_1920_1080_30fps_ij7ggd.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <div class="logo">Eric & Infinity</div>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/Our Story.html">Our Story</a>
+      <a href="/Photos.html">Photos</a>
+      <a href="#">Wedding Party</a>
+      <a href="#">Q & A</a>
+      <a href="#">Things to Do</a>
+      <a href="#">Registry</a>
+    </nav>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="navOverlay">
+    <a href="/index.html">Home</a>
+    <a href="/Our Story.html">Our Story</a>
+    <a href="/Photos.html">Photos</a>
+    <a href="#">Wedding Party</a>
+    <a href="/QandA.html">Q & A</a>
+    <a href="#">Things to Do</a>
+    <a href="#">Registry</a>
+  </div>
+
+  <main>
+    <img class="hero-image" src="https://astoria0951.wordpress.com/wp-content/uploads/2025/07/d36c3f9b-8c7d-4bc6-9e07-0c9336d86fe9.jpeg" alt="Eric and Infinity Engagement" />
+    <div class="date-location">Date TBA | Columbus, Ohio</div>
+    <h1>Welcome to Our Wedding Website</h1>
+    <p>We’re so excited to celebrate with you!</p>
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navOverlay = document.getElementById('navOverlay');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('open');
+      navOverlay.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q & A | Eric & Infinity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --nude-pink: #f7d9d9;
+      --off-white: #fffaf6;
+      --text-dark: #4a4a4a;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('https://res.cloudinary.com/dbeifkzba/image/upload/v1752516792/zoom-BG-garden-gala_lbqmtk.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: rgba(247, 217, 217, 0.9);
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: flex-end;
+      flex-grow: 1;
+      overflow: visible;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a4a4a;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .qa-section {
+      padding: 140px 2rem 3rem;
+      max-width: 800px;
+      margin: auto;
+      background-color: rgba(255, 250, 246, 0.85);
+      border-radius: 16px;
+    }
+
+    .qa-item {
+      background: #ffffff;
+      border-left: 4px solid var(--nude-pink);
+      margin-bottom: 1.5rem;
+      padding: 1.2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .qa-item:nth-child(even) {
+      animation-delay: 0.2s;
+    }
+
+    .qa-item:nth-child(odd) {
+      animation-delay: 0.4s;
+    }
+
+    .question {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .answer {
+      font-style: italic;
+      color: #777;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Eric & Infinity</div>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/Our Story.html">Our Story</a>
+      <a href="/Photos.html">Photos</a>
+      <a href="#">Wedding Party</a>
+      <a href="/QandA.html">Q & A</a>
+      <a href="#">Things to Do</a>
+      <a href="#">Registry</a>
+    </nav>
+  </header>
+
+  <section class="qa-section">
+    <div class="qa-item">
+      <div class="question">Who are Eric and Infinity’s parents?</div>
+      <div class="answer">Eric's parents are Eduardo Martinez and Daiana Martinez.
+        <br></br>
+        Infinity's parent is Keya Laney.
+      </div>
+    </div>
+    <div class="qa-item">
+      <div class="question">How did Eric and Infinity meet?</div>
+      <div class="answer">We met through a dating app.</div>
+    </div>
+    <div class="qa-item">
+      <div class="question">What made them realize they were meant to be?</div>
+      <div class="answer">Everything felt so natural and we both felt like we knew each other a lifetime.</div>
+    </div>
+    <div class="qa-item">
+      <div class="question">When and where is the wedding?</div>
+      <div class="answer">TBA.</div>
+    </div>
+    <div class="qa-item">
+      <div class="question">Can we bring guests or kids?</div>
+      <div class="answer">Yes, +1 including children of the parents are allowed.</div>
+    </div>
+    <div class="qa-item">
+      <div class="question">Is there a dress code for the ceremony?</div>
+      <div class="answer">Formal.</div>
+    </div>
+    <div class="qa-item">
+      <div class="question">What’s the best way to send a gift?</div>
+      <div class="answer">Online through Cash App or Apple Pay, or by cash or check.</div>
+    </div>
+  </section>
+</body>
+</html>
